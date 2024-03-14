@@ -1,0 +1,51 @@
+ /* Estilos personalizados para el sidebar */
+ #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 1000;
+    background-color: #343a40; /* Color de fondo del sidebar */
+    padding-top: 60px; /* Espacio para el encabezado */
+    transition: transform 0.3s ease-in-out; /* Animación de desplazamiento */
+    transform: translateX(-100%); /* Desplazar fuera de la pantalla inicialmente */
+}
+
+#sidebar.active {
+    transform: translateX(0); /* Desplazar hacia dentro de la pantalla cuando está activo */
+}
+
+#sidebar .sidebar-heading {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #fff; /* Color del texto del encabezado */
+}
+
+#sidebar .list-group-item {
+    background-color: transparent; /* Fondo transparente para los elementos de la lista */
+    border: none; /* Sin borde */
+    color: #fff; /* Color del texto de los elementos de la lista */
+    transition: background-color 0.3s; /* Transición de cambio de color de fondo */
+}
+
+#sidebar .list-group-item:hover {
+    background-color: #495057; /* Color de fondo al pasar el ratón */
+}
+
+#sidebar .list-group-item.active {
+    background-color: #212529; /* Color de fondo del elemento activo */
+    font-weight: bold; /* Texto en negrita para el elemento activo */
+}
+
+#content {
+    transition: margin-left 0.3s;
+    padding: 20px;
+}
+
+.btn-toggle-sidebar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001; /* Por encima del sidebar */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formateo de texto</title>
+    <!-- Enlace al archivo CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-heading">Temas</div>
+        <ul class="list-group list-group-flush">
+            <a href="../html/flujo.html" class="list-group-item">Flujo y manejo de errores</a>
+            <a href="../html/bucles.html" class="list-group-item">Bucles e iteración</a>
+            <a href="../html/funciones.html" class="list-group-item">Funciones</a>
+            <a href="../html/expresiones.html" class="list-group-item">Expresiones y operadores</a>
+            <a href="numeros.html" class="list-group-item">Números y fechas</a>
+            <a href="texto.html" class="list-group-item">Formateo de texto</a>
+            <a href="colecciones.html" class="list-group-item">Colecciones indexadas</a>
+            <a href="dom.html" class="list-group-item">DOM</a>
+        </ul>
+    </div>
+
+    <div id="content">
+        <button id="btn-toggle-sidebar" class="btn btn-dark btn-toggle-sidebar">&#9776;</button>
+        <div class="container mt-5">
+            <div class="container mt-5">
+                <h1 class="mb-4">String Examples</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Cadenas Literales</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul id="literal-examples" class="list-group">
+                                    <!-- Ejemplos de cadenas literales se agregan aquí -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Métodos de String</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul id="string-methods" class="list-group">
+                                    <!-- Ejemplos de métodos de String se agregan aquí -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="../js/texto.js"></script>
+    <script>
+        // Obtener el botón de alternar el sidebar
+        var btnToggleSidebar = document.getElementById('btn-toggle-sidebar');
+
+        // Obtener el sidebar y el contenido
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+
+        // Agregar un evento de clic al botón de alternar el sidebar
+        btnToggleSidebar.addEventListener('click', function() {
+            // Alternar la clase 'active' en el sidebar
+            sidebar.classList.toggle('active');
+            // Alternar el margen izquierdo del contenido para ajustar el ancho del sidebar
+            content.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

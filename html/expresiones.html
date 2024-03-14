@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones y operadores </title>
+    <!-- Enlace al archivo CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-heading">Temas</div>
+        <ul class="list-group list-group-flush">
+            <a href="../html/flujo.html" class="list-group-item">Flujo y manejo de errores</a>
+            <a href="../html/bucles.html" class="list-group-item">Bucles e iteración</a>
+            <a href="../html/funciones.html" class="list-group-item">Funciones</a>
+            <a href="../html/expresiones.html" class="list-group-item">Expresiones y operadores</a>
+            <a href="numeros.html" class="list-group-item">Números y fechas</a>
+            <a href="texto.html" class="list-group-item">Formateo de texto</a>
+            <a href="colecciones.html" class="list-group-item">Colecciones indexadas</a>
+            <a href="dom.html" class="list-group-item">DOM</a>
+        </ul>
+    </div>
+    <div id="content">
+        <button id="btn-toggle-sidebar" class="btn btn-dark btn-toggle-sidebar">&#9776;</button>
+        <div class="container mt-5">
+            <h1 class="mb-4">JavaScript Operations</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Asignaciones</h5>
+                            <p class="card-text">x = 10, y = 5</p>
+                            <p class="card-text">Resultado 1: x = y <span id="resultado1"></span></p>
+                            <p class="card-text">Resultado 2: x += y <span id="resultado2"></span</p>
+                            <p class="card-text">Resultado 3: x -= y <span id="resultado3"></span</p>
+                            <p class="card-text">Resultado 4: x *= y <span id="resultado4"></span</p>
+                            <p class="card-text">Resultado 5: x /= y <span id="resultado5"></span</p>
+                            <p class="card-text">Resultado 6: x %= y <span id="resultado6"></span</p>
+                            <p class="card-text">Resultado 7: x **= y <span id="resultado7"></span</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Operadores Aritméticos</h5>
+                            <p class="card-text">a = 10, b = 5</p>
+                            <p class="card-text">Resultado 1: a + b <span id="aritmetico1"></span></p>
+                            <p class="card-text">Resultado 2: a - b <span id="aritmetico2"></span></p>
+                            <p class="card-text">Resultado 3: a * b <span id="aritmetico3"></span></p>
+                            <p class="card-text">Resultado 4: a / b <span id="aritmetico4"></span></p>
+                            <p class="card-text">Resultado 5: a % b <span id="aritmetico5"></span></p>
+                            <p class="card-text">Resultado 6: a++ <span id="aritmetico6"></span></p>
+                            <p class="card-text">Resultado 7: b-- <span id="aritmetico7"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Operadores Lógicos</h5>
+                            <p class="card-text">x = 10, y = 5</p>
+                            <p class="card-text">Resultado 1: x == y <span id="logico1"></span></p>
+                            <p class="card-text">Resultado 2: x != y <span id="logico2"></span></p>
+                            <p class="card-text">Resultado 3: x === y <span id="logico3"></span></p>
+                            <p class="card-text">Resultado 4: x !== y <span id="logico4"></span></p>
+                            <p class="card-text">Resultado 5: x > y <span id="logico5"></span></p>
+                            <p class="card-text">Resultado 6: x < y <span id="logico6"></span></p>
+                            <p class="card-text">Resultado 7: x >= y <span id="logico7"></span></p>
+                            <p class="card-text">Resultado 8: x <= y <span id="logico8"></span></p>
+                            <p class="card-text">Resultado 9: x ? y : 0 <span id="logico9"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="../js/operaciones.js"></script>
+    <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Obtener el botón de alternar el sidebar
+        var btnToggleSidebar = document.getElementById('btn-toggle-sidebar');
+
+        // Obtener el sidebar y el contenido
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+
+        // Agregar un evento de clic al botón de alternar el sidebar
+        btnToggleSidebar.addEventListener('click', function() {
+            // Alternar la clase 'active' en el sidebar
+            sidebar.classList.toggle('active');
+            // Alternar el margen izquierdo del contenido para ajustar el ancho del sidebar
+            content.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

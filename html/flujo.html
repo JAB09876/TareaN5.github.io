@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de flujo y manejo de errores</title>
+    <!-- Enlace al archivo CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-heading">Temas</div>
+        <ul class="list-group list-group-flush">
+            <a href="../html/flujo.html" class="list-group-item">Flujo y manejo de errores</a>
+            <a href="../html/bucles.html" class="list-group-item">Bucles e iteración</a>
+            <a href="../html/funciones.html" class="list-group-item">Funciones</a>
+            <a href="../html/expresiones.html" class="list-group-item">Expresiones y operadores</a>
+            <a href="numeros.html" class="list-group-item">Números y fechas</a>
+            <a href="texto.html" class="list-group-item">Formateo de texto</a>
+            <a href="colecciones.html" class="list-group-item">Colecciones indexadas</a>
+            <a href="dom.html" class="list-group-item">DOM</a>
+        </ul>
+    </div>
+
+    <div id="content">
+        <button id="btn-toggle-sidebar" class="btn btn-dark btn-toggle-sidebar">&#9776;</button>
+        <div class="container mt-5">
+            <div class="row">
+                <div id="if_else" class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Ejemplo de if...else</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="if_else_result"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="switch" class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Ejemplo de switch</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="switch_result"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div id="try_catch_throw" class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Ejemplo de try/catch/throw</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="try_catch_throw_result"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="objetos_error" class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Ejemplo de Objetos Error</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="objetos_error_result"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace al archivo JavaScript personalizado -->
+    <script src="../js/flujos_errores.js"></script>
+    <script>
+        // Obtener el botón de alternar el sidebar
+        var btnToggleSidebar = document.getElementById('btn-toggle-sidebar');
+
+        // Obtener el sidebar y el contenido
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+
+        // Agregar un evento de clic al botón de alternar el sidebar
+        btnToggleSidebar.addEventListener('click', function() {
+            // Alternar la clase 'active' en el sidebar
+            sidebar.classList.toggle('active');
+            // Alternar el margen izquierdo del contenido para ajustar el ancho del sidebar
+            content.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

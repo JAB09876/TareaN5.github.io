@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos con Sidebar y Footer</title>
+    <!-- Enlace al archivo CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-heading">Temas</div>
+        <ul class="list-group list-group-flush">
+            <a href="html/flujo.html" class="list-group-item">Flujo y manejo de errores</a>
+            <a href="html/bucles.html" class="list-group-item">Bucles e iteración</a>
+            <a href="html/funciones.html" class="list-group-item">Funciones</a>
+            <a href="html/expresiones.html" class="list-group-item">Expresiones y operadores</a>
+            <a href="html/numeros.html" class="list-group-item">Números y fechas</a>
+            <a href="html/texto.html" class="list-group-item">Formateo de texto</a>
+            <a href="html/colecciones.html" class="list-group-item">Colecciones indexadas</a>
+            <a href="html/dom.html" class="list-group-item">DOM</a>
+        </ul>
+    </div>
+
+    <div id="content">
+        <button id="btn-toggle-sidebar" class="btn btn-dark btn-toggle-sidebar">&#9776;</button>
+        <div class="container mt-5">
+            <h1>Tarea N5</h1>
+            <p>José Daniel Chaves Campos.</p>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript de Bootstrap 5-->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Obtener el botón de alternar el sidebar
+        var btnToggleSidebar = document.getElementById('btn-toggle-sidebar');
+
+        // Obtener el sidebar y el contenido
+        var sidebar = document.getElementById('sidebar');
+        var content = document.getElementById('content');
+
+        // Agregar un evento de clic al botón de alternar el sidebar
+        btnToggleSidebar.addEventListener('click', function() {
+            // Alternar la clase 'active' en el sidebar
+            sidebar.classList.toggle('active');
+            // Alternar el margen izquierdo del contenido para ajustar el ancho del sidebar
+            content.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
